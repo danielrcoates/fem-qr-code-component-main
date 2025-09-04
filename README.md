@@ -24,7 +24,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ### Links
 
 - Solution GitHub: [Frontend Mentor QR Code Component Challenge](https://github.com/danielrcoates/fem-qr-code-component-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://danielrcoates.github.io/fem-qr-code-component-main/)
 
 ### What I learned
 

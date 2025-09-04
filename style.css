@@ -1,2 +1,129 @@
+/* Josh Comeau - CSS Reset <https://www.joshwcomeau.com/css/custom-css-reset/> */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Design System */
+
+:root {
+    --cl-slate-300: hsl(212, 45%, 89%);
+    --cl-slate-500: hsl(216, 15%, 48%);
+    --cl-slate-900: hsl(218, 44%, 22%);
+
+    --sp-200: 1.0rem;
+    --sp-250: 1.25rem;
+    --sp-300: 1.5rem;
+    --sp-500: 2.5rem;
+
+}
+
+/* outfit-regular - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+src: url('/fonts/outfit-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* outfit-700 - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+src: url('/fonts/outfit-v14-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* FEM Attribution Links */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cl-slate-300);
+    text-align: center;
+    height: 100vh;
+}
+
+img {
+    border-radius: 10px;
+    margin-bottom: var(--sp-200);
+}
+
+h1 {
+    font-family: Outfit;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: var(--cl-slate-900);
+    margin: var(--sp-200) var(--sp-200) var(--sp-250);
+}
+
+p {
+    font-family: Outfit;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    color: var(--cl-slate-500);
+    margin: var(--sp-200) var(--sp-200) var(--sp-250);
+}
+
+.component {
+    background-color: white;
+    border-radius: var(--sp-250);
+    margin: auto;
+    width: 320px;
+    height: 500px;
+    
+    padding: var(--sp-200) var(--sp-200) var(--sp-500);
+
+}
